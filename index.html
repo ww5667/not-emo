@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="心晴——为年轻人设计的情绪日记与自我关怀空间。" />
+    <title>心晴 · 情绪日记与自我关怀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="心晴首页">
+          <span class="brand-mark">心</span>
+          <span>心晴</span>
+        </a>
+        <nav class="nav-links" aria-label="主导航">
+          <a class="active" href="#today">今天</a>
+          <a href="#insights">情绪洞察</a>
+          <a href="#care">自我关怀</a>
+          <a href="#stories">共鸣故事</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" aria-label="搜索">⌕</button>
+          <button class="icon-button notification" aria-label="通知">♧<i></i></button>
+          <button class="avatar" aria-label="个人中心">晴</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="welcome" id="today">
+          <div>
+            <p class="eyebrow">2026年9月22日 · 星期二</p>
+            <h1>晚上好，亦杰 <span>👋</span></h1>
+            <p>辛苦了，今天也记得给自己一点温柔。</p>
+          </div>
+          <div class="quote-card">
+            <span>“</span>
+            <p>情绪不是需要解决的问题，<br />而是值得被倾听的声音。</p>
+            <i>今日心语</i>
+          </div>
+        </section>
+
+        <section class="dashboard">
+          <article class="card mood-card">
+            <div class="card-heading">
+              <div>
+                <span class="tiny-label">此刻的你</span>
+                <h2>现在感觉怎么样？</h2>
+              </div>
+              <span class="soft-icon coral">♡</span>
+            </div>
+            <div class="moods" role="radiogroup" aria-label="选择当前情绪">
+              <button class="mood" data-mood="开心" data-emoji="😊"><span>😊</span><b>开心</b></button>
+              <button class="mood" data-mood="平静" data-emoji="😌"><span>😌</span><b>平静</b></button>
+              <button class="mood" data-mood="低落" data-emoji="😔"><span>😔</span><b>低落</b></button>
+              <button class="mood selected" data-mood="焦虑" data-emoji="😟"><span>😟</span><b>焦虑</b></button>
+              <button class="mood" data-mood="生气" data-emoji="😠"><span>😠</span><b>生气</b></button>
+              <button class="mood" data-mood="压力大" data-emoji="😣"><span>😣</span><b>压力大</b></button>
+            </div>
+            <div class="mood-note">
+              <textarea id="moodNote" maxlength="120" placeholder="愿意说说发生了什么吗？"></textarea>
+              <span id="charCount">0/120</span>
+            </div>
+            <button class="primary-button" id="recordButton">记录此刻心情 <span>→</span></button>
+            <p class="saved-message" id="savedMessage" aria-live="polite"></p>
+          </article>
+
+          <article class="card insight-card" id="insights">
+            <div class="card-heading">
+              <div><span class="tiny-label">本周概览</span><h2>情绪晴雨表</h2></div>
+              <button class="text-button">查看详情 →</button>
+            </div>
+            <div class="chart-wrap">
+              <div class="chart-info"><b>本周情绪</b><strong>趋于平稳 <span>↗ 12%</span></strong></div>
+              <svg class="line-chart" viewBox="0 0 620 210" role="img" aria-label="本周情绪变化折线图">
+                <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7aaeb2" stop-opacity=".35"/><stop offset="1" stop-color="#7aaeb2" stop-opacity="0"/></linearGradient></defs>
+                <g class="grid"><line x1="22" y1="40" x2="600" y2="40"/><line x1="22" y1="90" x2="600" y2="90"/><line x1="22" y1="140" x2="600" y2="140"/></g>
+                <path class="area" d="M22 135 C80 125,94 96,130 100 S190 122,220 112 S280 88,315 96 S385 118,420 89 S485 54,510 70 S563 52,600 36 L600 165 L22 165Z"/>
+                <path class="line" d="M22 135 C80 125,94 96,130 100 S190 122,220 112 S280 88,315 96 S385 118,420 89 S485 54,510 70 S563 52,600 36"/>
+                <g class="points"><circle cx="22" cy="135" r="5"/><circle cx="130" cy="100" r="5"/><circle cx="220" cy="112" r="5"/><circle cx="315" cy="96" r="5"/><circle cx="420" cy="89" r="5"/><circle cx="510" cy="70" r="5"/><circle cx="600" cy="36" r="6"/></g>
+                <g class="days"><text x="22" y="195">周一</text><text x="118" y="195">周二</text><text x="208" y="195">周三</text><text x="303" y="195">周四</text><text x="408" y="195">周五</text><text x="498" y="195">周六</text><text x="584" y="195">周日</text></g>
+              </svg>
+            </div>
+            <div class="stats">
+              <div><span class="stat-icon blue">▤</span><p>记录次数<b>12</b></p><em>↑ 3 次</em></div>
+              <div><span class="stat-icon mint">◔</span><p>平静时刻<b>68%</b></p><em>↑ 8%</em></div>
+              <div><span class="stat-icon peach">♢</span><p>连续记录<b>7 天</b></p><em>很棒！</em></div>
+            </div>
+          </article>
+
+          <aside class="side-column" id="care">
+            <article class="card care-card">
+              <div class="card-heading"><div><span class="tiny-label">为你推荐</span><h2>现在适合这样做</h2></div><span class="soft-icon blue">✦</span></div>
+              <div class="care-item featured">
+                <div class="care-art breath"><span>☘</span></div>
+                <div><span class="duration">3 分钟</span><h3>呼吸练习</h3><p>跟随呼吸，让身体慢下来</p></div>
+                <button aria-label="开始呼吸练习">▶</button>
+              </div>
+              <div class="care-item"><div class="care-art meditation">♧</div><div><span class="duration">5 分钟</span><h3>松弛冥想</h3><p>给大脑一个温柔的暂停</p></div><button aria-label="开始冥想">▶</button></div>
+              <div class="care-item"><div class="care-art music">♫</div><div><span class="duration">舒缓歌单</span><h3>听见微风</h3><p>用音乐安抚此刻的情绪</p></div><button aria-label="播放音乐">▶</button></div>
+            </article>
+          </aside>
+        </section>
+
+        <section class="lower-grid">
+          <article class="card triggers">
+            <div class="card-heading"><div><span class="tiny-label">情绪背后</span><h2>最近的触发因素</h2></div><button class="text-button">全部分析 →</button></div>
+            <div class="trigger-content">
+              <div class="donut"><div><b>38%</b><span>工作</span></div></div>
+              <div class="trigger-bars">
+                <div><span>工作</span><i><b style="width:82%"></b></i><em>38%</em></div>
+                <div><span>学习</span><i><b style="width:57%"></b></i><em>26%</em></div>
+                <div><span>社交</span><i><b style="width:36%"></b></i><em>18%</em></div>
+                <div><span>睡眠</span><i><b style="width:22%"></b></i><em>11%</em></div>
+              </div>
+            </div>
+          </article>
+          <article class="card story" id="stories">
+            <div class="story-top"><span class="story-avatar">☁</span><div><b>一朵慢慢走的云</b><span>2小时前 · 匿名</span></div><button>•••</button></div>
+            <p class="story-tag"># 职场压力</p>
+            <blockquote>“允许自己偶尔停下来，也是一种向前。”</blockquote>
+            <p>今天终于拒绝了一个不合理的加班要求。以前总怕让别人失望，后来才明白，照顾好自己的感受也很重要。</p>
+            <div class="story-actions"><button>♡ <span>128</span></button><button>◌ <span>24</span></button><button>↗ 分享</button></div>
+          </article>
+          <article class="card checkin">
+            <span class="leaf">❧</span><div><span class="tiny-label">晚间小憩</span><h2>今天，也辛苦了</h2><p>睡前花一分钟，写下今天值得感谢的一件小事。</p><button class="outline-button">写下此刻的想法 →</button></div>
+          </article>
+        </section>
+      </main>
+      <footer><span>心晴 · 陪你看见每一种情绪</span><span>如果你正经历危机，请及时联系身边可信赖的人或专业机构。</span></footer>
+    </div>
+    <div class="toast" id="toast" role="status">已记录此刻心情 ✨</div>
+    <script src="app.js"></script>
+  </body>
+</html>
