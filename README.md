@@ -8,7 +8,7 @@
 
 [![GitHub Pages 部署状态](https://github.com/ww5667/not-emo/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/ww5667/not-emo/actions/workflows/deploy-pages.yml)
 
-> 截至 2026-09-22 最近一次检查，部署在 Configure Pages 步骤失败，尚未完成上线。需先启用 GitHub Pages，再重新运行部署；上方地址不是已上线的保证，最新结果请查看部署状态。
+> 已通过 GitHub Pages 官方工作流部署。点击上方地址即可体验；后续更新的发布结果请查看部署状态徽章。
 
 **源代码：[ww5667/not-emo](https://github.com/ww5667/not-emo)**
 
