@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f6f1" />
+  <title>此刻 · 情绪日记与自我关怀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a href="#" class="brand" aria-label="此刻首页"><span class="brand-mark">此</span><span>此刻</span></a>
+    <nav aria-label="主导航"><a href="#today" class="active">今日</a><a href="#insights">情绪洞察</a><a href="#care">自我关怀</a></nav>
+    <button class="avatar" aria-label="个人中心">汐</button>
+  </header>
+
+  <main>
+    <section id="today" class="hero">
+      <div class="eyebrow"><span></span> TUESDAY · 22 SEPTEMBER</div>
+      <h1>下午好，小汐<br><em>今天的心情，还好吗？</em></h1>
+      <p class="intro">不用急着变好，先花一分钟听听内心的声音。</p>
+
+      <div class="mood-card">
+        <div class="card-heading"><div><small>此刻感受</small><h2>哪一个，更像现在的你？</h2></div><span class="time">14:32</span></div>
+        <div class="moods" role="radiogroup" aria-label="选择心情">
+          <button class="mood" data-mood="低落" aria-label="低落"><span>☁</span><b>低落</b></button>
+          <button class="mood" data-mood="疲惫" aria-label="疲惫"><span>◔</span><b>疲惫</b></button>
+          <button class="mood selected" data-mood="平静" aria-label="平静"><span>◡</span><b>平静</b></button>
+          <button class="mood" data-mood="不错" aria-label="不错"><span>◠</span><b>不错</b></button>
+          <button class="mood" data-mood="开心" aria-label="开心"><span>✦</span><b>开心</b></button>
+        </div>
+        <label class="note-label" for="note">想记下点什么吗？</label>
+        <textarea id="note" maxlength="200" placeholder="今天发生了什么，或许只是一个小瞬间……"></textarea>
+        <div class="note-footer"><span id="counter">0 / 200</span><button id="record">记录此刻 <span>→</span></button></div>
+      </div>
+    </section>
+
+    <section id="insights" class="insights-section">
+      <div class="section-title"><div><small>MY EMOTIONAL WEEK</small><h2>这一周，你已经走了很远</h2></div><button class="link-btn">查看完整报告 ↗</button></div>
+      <div class="grid">
+        <article class="chart-card">
+          <div class="stat"><span>情绪趋势</span><b><i></i>比上周平稳 12%</b></div>
+          <div class="chart" aria-label="本周情绪趋势图">
+            <div class="chart-lines"><i></i><i></i><i></i></div>
+            <svg viewBox="0 0 700 170" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b9b7e" stop-opacity=".22"/><stop offset="1" stop-color="#7b9b7e" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0,125 C60,128 80,70 145,83 S235,138 290,102 S365,45 430,69 S505,120 560,88 S640,35 700,55 L700,170 L0,170Z"/><path class="line" d="M0,125 C60,128 80,70 145,83 S235,138 290,102 S365,45 430,69 S505,120 560,88 S640,35 700,55"/></svg>
+            <div class="days"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+          </div>
+        </article>
+        <article class="trigger-card">
+          <span class="mini-label">本周情绪关键词</span><div class="trigger-main"><div class="rings"><div><strong>工作</strong><small>42%</small></div></div><div class="legend"><p><i class="green"></i><span>工作进度</span><b>42%</b></p><p><i class="yellow"></i><span>睡眠状态</span><b>31%</b></p><p><i class="blue"></i><span>人际关系</span><b>17%</b></p><p><i class="gray"></i><span>其他</span><b>10%</b></p></div></div>
+          <p class="soft-tip">你在工作繁忙的日子更容易感到疲惫，<br>也许可以试着给自己留一点缓冲。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="care" class="care-section">
+      <div class="section-title"><div><small>JUST FOR YOU</small><h2>给此刻的你，一点温柔</h2></div><div class="pills"><button class="active">全部</button><button>冥想</button><button>音乐</button><button>运动</button></div></div>
+      <div class="care-grid">
+        <article class="care-card featured"><div class="art breathe"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><button class="play" aria-label="播放">▶</button></div><div class="care-copy"><small>呼吸练习 · 5 分钟</small><h3>把注意力，带回此刻</h3><p>一段轻柔的呼吸引导，帮你从忙乱中慢慢安静下来。</p><button class="start">开始练习</button></div></article>
+        <article class="care-card"><div class="art music-art"><span>♪</span><i></i><i></i><i></i></div><div class="care-copy"><small>白噪音 · 25 分钟</small><h3>雨落在窗边</h3><p>适合专注与放松的细雨声。</p><button class="text-play">▶ 播放</button></div></article>
+        <article class="care-card"><div class="art stretch-art"><div class="sun"></div><div class="figure">⌇</div><span>舒展一下</span></div><div class="care-copy"><small>办公室拉伸 · 8 分钟</small><h3>让肩颈松一口气</h3><p>几个简单动作，释放久坐的紧绷。</p><button class="text-play">开始 →</button></div></article>
+      </div>
+    </section>
+
+    <section class="quote"><span>“</span><p>你不需要每天都闪闪发光。<br>有时候，安静地照顾好自己，就已经很了不起。</p><small>— 今日关怀</small></section>
+  </main>
+  <div id="toast" role="status">已为你收藏此刻的心情</div>
+  <footer><a class="brand"><span class="brand-mark">此</span><span>此刻</span></a><p>陪你认识情绪，也陪你温柔地照顾自己。</p><span>© 2026 此刻 · 你的情绪自留地</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
