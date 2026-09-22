@@ -49,15 +49,6 @@ python -m http.server 4173
 
 main 分支推送后，由 [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml) 使用 GitHub 官方 Actions 自动部署。
 
-### 首次启用与发布
-
-1. 打开仓库的 [Settings → Pages](https://github.com/ww5667/not-emo/settings/pages)。
-2. 在 **Build and deployment → Source** 中选择 **GitHub Actions**。
-3. 打开 [部署工作流](https://github.com/ww5667/not-emo/actions/workflows/deploy-pages.yml)，选择 **Run workflow → main → Run workflow**；也可以在失败的运行中选择 **Re-run failed jobs**。
-4. 等待部署成功，再访问 [心晴在线 Demo](https://ww5667.github.io/not-emo/)。
-
-如果出现 404 或 Configure Pages 失败，请先确认已完成第 2 步，再重跑工作流。启用成功后，后续推送 main 分支会自动更新在线网站。
-
 所有资源使用相对路径，支持 GitHub Pages 的 /not-emo/ 子目录。克隆后保留 origin 远程连接，后续使用 git pull 和 git push 同步。
 
 ## 文件
